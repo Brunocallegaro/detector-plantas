@@ -1,0 +1,15 @@
+# Bibliotecas necessárias para treinar, avaliar e executar a API.
+# Testado com Python 3.13, torch 2.15, torchvision 0.29, fastapi 0.165 (novembro/2026).
+# Python mínimo: 3.10.
+#
+# PyTorch com GPU NVIDIA (opcional): instale ANTES, seguindo https://pytorch.org/get-started/locally/
+# No Windows, o "pip install torch" padrão instala a versão para CPU, que já é suficiente.
+torch>=2.2
+torchvision>=0.17
+numpy>=1.24
+pillow>=10.0
+matplotlib>=3.7
+scikit-learn>=1.3
+fastapi>=0.110
+uvicorn>=0.27
+python-multipart>=0.0.9

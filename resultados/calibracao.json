@@ -1,0 +1,110 @@
+{
+  "binario_validacao_limiar_0_5": {
+    "limiar": 0.5,
+    "acuracia": 0.9738562091503268,
+    "sensibilidade_doente": 0.9583333333333334,
+    "especificidade_saudavel": 0.9876543209876543,
+    "precisao_doente": 0.9857142857142858,
+    "matriz_confusao": {
+      "doente_como_doente": 69,
+      "doente_como_saudavel": 3,
+      "saudavel_como_doente": 1,
+      "saudavel_como_saudavel": 80
+    }
+  },
+  "binario_validacao_calibrado": {
+    "limiar": 0.06,
+    "acuracia": 0.9934640522875817,
+    "sensibilidade_doente": 1.0,
+    "especificidade_saudavel": 0.9876543209876543,
+    "precisao_doente": 0.9863013698630136,
+    "matriz_confusao": {
+      "doente_como_doente": 72,
+      "doente_como_saudavel": 0,
+      "saudavel_como_doente": 1,
+      "saudavel_como_saudavel": 80
+    }
+  },
+  "binario_teste_limiar_0_5": {
+    "limiar": 0.5,
+    "acuracia": 0.96045197740113,
+    "sensibilidade_doente": 0.9270833333333334,
+    "especificidade_saudavel": 1.0,
+    "precisao_doente": 1.0,
+    "matriz_confusao": {
+      "doente_como_doente": 89,
+      "doente_como_saudavel": 7,
+      "saudavel_como_doente": 0,
+      "saudavel_como_saudavel": 81
+    }
+  },
+  "binario_teste_calibrado": {
+    "limiar": 0.06,
+    "acuracia": 0.9774011299435028,
+    "sensibilidade_doente": 0.9895833333333334,
+    "especificidade_saudavel": 0.9629629629629629,
+    "precisao_doente": 0.9693877551020408,
+    "matriz_confusao": {
+      "doente_como_doente": 95,
+      "doente_como_saudavel": 1,
+      "saudavel_como_doente": 3,
+      "saudavel_como_saudavel": 78
+    }
+  },
+  "padrao": {
+    "fonte_caracteristicas": "detalhado",
+    "k_vizinhos": 1,
+    "percentil": 99,
+    "limiar": 0.3039349615573883,
+    "teste_marcadas_fora_do_padrao": 2,
+    "teste_total": 177,
+    "pontuacao_teste_max": 0.35645872354507446,
+    "pontuacao_validacao_max": 0.3681873083114624
+  },
+  "detalhado": {
+    "limiar_planta": 0.3,
+    "limiar_doenca": 0.4,
+    "planta_validacao": {
+      "cobertura": 0.9934640522875817,
+      "precisao_quando_exibido": 0.9736842105263158,
+      "acuracia_sem_limiar": 0.9738562091503268
+    },
+    "planta_teste": {
+      "cobertura": 0.9943502824858758,
+      "precisao_quando_exibido": 0.9659090909090909,
+      "acuracia_sem_limiar": 0.9661016949152542
+    },
+    "doenca_validacao": {
+      "cobertura": 0.8888888888888888,
+      "precisao_quando_exibido": 0.90625,
+      "acuracia_sem_limiar": 0.8611111111111112
+    },
+    "doenca_teste": {
+      "cobertura": 0.9368421052631579,
+      "precisao_quando_exibido": 0.8876404494382022,
+      "acuracia_sem_limiar": 0.8736842105263158
+    }
+  },
+  "erros_teste_calibrado": [
+    {
+      "arquivo": "Cherry_including_sour_Powdery_mildew_018.jpg",
+      "real": "doente",
+      "p_doente": 0.02
+    },
+    {
+      "arquivo": "Peach_healthy_057.jpg",
+      "real": "saudavel",
+      "p_doente": 0.0996
+    },
+    {
+      "arquivo": "Pepper_bell_healthy_058.jpg",
+      "real": "saudavel",
+      "p_doente": 0.1402
+    },
+    {
+      "arquivo": "Strawberry_healthy_051.jpg",
+      "real": "saudavel",
+      "p_doente": 0.1229
+    }
+  ]
+}

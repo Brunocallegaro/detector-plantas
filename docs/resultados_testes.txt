@@ -1,0 +1,85 @@
+Execução real em 18/11/2026 22:39 | Python 3.13.18 | torch 2.15.0+cu132 | CPU
+
+============================= test session starts ==============================
+platform linux -- Python 3.13.18, pytest-9.1.1, pluggy-1.6.0 -- /usr/local/bin/python3
+rootdir: /home/claude/projeto/detector_plantas
+configfile: pytest.ini
+plugins: platformdirs-4.13.5, anyio-4.15.1
+collecting ... collected 44 items
+
+PASSED
+PASSED
+PASSED
+PASSED
+2026-11-18 22:39:19,390 | ERROR   | detector.api | Falha na previsão de Tomato_healthy_051.jpg
+Traceback (most recent call last):
+  File "/home/claude/projeto/detector_plantas/api.py", line 169, in _analisar
+    resultado = await run_in_threadpool(analisador.analisar, img)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/starlette/concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "/home/claude/projeto/detector_plantas/tests/test_api.py", line 56, in falhar
+    raise RuntimeError("Erro interno ao executar o modelo de IA.")
+RuntimeError: Erro interno ao executar o modelo de IA.
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+tests/test_modelo.py::test_checkpoint_carrega_com_arquitetura_identica PASSED
+tests/test_modelo.py::test_classes_batem_com_as_pastas_do_dataset PASSED
+tests/test_modelo.py::test_preprocessamento_igual_ao_treino PASSED
+tests/test_modelo.py::test_modelo_inexistente_gera_erro_claro PASSED
+tests/test_modelo.py::test_previsao_deterministica PASSED
+tests/test_modelo.py::test_classifica_folhas_do_teste[saudavel] PASSED
+tests/test_modelo.py::test_classifica_folhas_do_teste[doente] PASSED
+tests/test_modelo.py::test_metricas_do_conjunto_de_teste_completo 
+Acurácia no teste: 173/177 = 97.7%
+PASSED
+tests/test_modelo.py::test_modelo_detalhado_identifica_planta PASSED
+tests/test_modelo.py::test_doenca_nao_aparece_em_folha_saudavel PASSED
+tests/test_modelo.py::test_funciona_na_gpu SKIPPED (sem GPU CUDA nes...)
+PASSED
+tests/test_modelo.py::test_calibracao_corresponde_ao_modelo PASSED
+tests/test_padrao.py::test_fotos_que_nao_sao_folhas_ficam_inconclusivas 
+Inconclusivas: 15/15 | não detectadas: []
+PASSED
+tests/test_padrao.py::test_inconclusivo_nao_mostra_planta_nem_doenca PASSED
+tests/test_padrao.py::test_poucas_folhas_reais_marcadas_como_fora_do_padrao 
+Folhas de teste marcadas como fora do padrão: 2/177
+PASSED
+tests/test_pipeline.py::test_dados_identicos_ao_treino_original PASSED
+PASSED
+tests/test_pipeline.py::test_backup_preserva_o_modelo 
+PASSED
+tests/test_validacao.py::test_arquivo_vazio PASSED
+tests/test_validacao.py::test_arquivo_texto PASSED
+tests/test_validacao.py::test_arquivo_grande_demais PASSED
+tests/test_validacao.py::test_jpeg_truncado PASSED
+tests/test_validacao.py::test_imagem_pequena_demais PASSED
+tests/test_validacao.py::test_imagem_de_uma_cor_so PASSED
+tests/test_validacao.py::test_formato_nao_suportado_gif PASSED
+tests/test_validacao.py::test_formatos_aceitos[JPEG] PASSED
+tests/test_validacao.py::test_formatos_aceitos[PNG] PASSED
+tests/test_validacao.py::test_formatos_aceitos[WEBP] PASSED
+tests/test_validacao.py::test_formatos_aceitos[BMP] PASSED
+tests/test_validacao.py::test_png_transparente_vira_fundo_branco PASSED
+tests/test_validacao.py::test_rotacao_exif_de_celular_e_aplicada PASSED
+
+======================== 43 passed, 1 skipped in 8.95s =========================

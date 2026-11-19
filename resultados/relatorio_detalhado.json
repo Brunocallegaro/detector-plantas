@@ -1,0 +1,142 @@
+{
+  "imagens_teste": 177,
+  "acuracia_classe_exata": 0.9152542372881356,
+  "acuracia_planta": 0.9661016949152542,
+  "acuracia_doenca_entre_doentes": 0.875,
+  "acuracia_planta_por_especie": {
+    "Batata": 1.0,
+    "Cerejeira": 1.0,
+    "Macieira": 0.8095238095238095,
+    "Milho": 1.0,
+    "Morangueiro": 0.9230769230769231,
+    "Pessegueiro": 1.0,
+    "Pimentão": 1.0,
+    "Tomateiro": 0.9777777777777777,
+    "Videira": 1.0
+  },
+  "erros": [
+    "  Apple_Apple_scab_021.jpg: real=Apple_Apple_scab  previsto=Tomato_Late_blight",
+    "  Apple_Black_rot_021.jpg: real=Apple_Black_rot  previsto=Tomato_Bacterial_spot",
+    "  Tomato_Bacterial_spot_018.jpg: real=Tomato_Bacterial_spot  previsto=Grape_Black_rot",
+    "  Tomato_Early_blight_018.jpg: real=Tomato_Early_blight  previsto=Tomato_Septoria_leaf_spot",
+    "  Tomato_Late_blight_019.jpg: real=Tomato_Late_blight  previsto=Tomato_Early_blight",
+    "  Tomato_Late_blight_020.jpg: real=Tomato_Late_blight  previsto=Tomato_Septoria_leaf_spot",
+    "  Tomato_Late_blight_021.jpg: real=Tomato_Late_blight  previsto=Tomato_Early_blight",
+    "  Tomato_Leaf_Mold_018.jpg: real=Tomato_Leaf_Mold  previsto=Tomato_Septoria_leaf_spot",
+    "  Tomato_Septoria_leaf_spot_019.jpg: real=Tomato_Septoria_leaf_spot  previsto=Tomato_Bacterial_spot",
+    "  Tomato_Septoria_leaf_spot_021.jpg: real=Tomato_Septoria_leaf_spot  previsto=Tomato_Target_Spot",
+    "  Tomato_Target_Spot_020.jpg: real=Tomato_Target_Spot  previsto=Tomato_Septoria_leaf_spot",
+    "  Tomato_Target_Spot_021.jpg: real=Tomato_Target_Spot  previsto=Tomato_Spider_mites_Two-spotted_spider_mite",
+    "  Apple_healthy_052.jpg: real=Apple_healthy  previsto=Potato_healthy",
+    "  Apple_healthy_056.jpg: real=Apple_healthy  previsto=Strawberry_healthy",
+    "  Strawberry_healthy_051.jpg: real=Strawberry_healthy  previsto=Tomato_Late_blight"
+  ],
+  "melhor_acuracia_validacao": 0.9281045751633987,
+  "historico": [
+    {
+      "epoca": 1,
+      "perda_treino": 2.7438928945277765,
+      "acc_treino": 0.3712737127371274,
+      "perda_val": 1.8829996056026883,
+      "acc_val": 0.6013071895424836
+    },
+    {
+      "epoca": 2,
+      "perda_treino": 1.6266518592188353,
+      "acc_treino": 0.7195121951219512,
+      "perda_val": 1.5559169778636857,
+      "acc_val": 0.7058823529411765
+    },
+    {
+      "epoca": 3,
+      "perda_treino": 1.1603817810534138,
+      "acc_treino": 0.8224932249322493,
+      "perda_val": 1.1181349898475448,
+      "acc_val": 0.8235294117647058
+    },
+    {
+      "epoca": 4,
+      "perda_treino": 0.9493684471461185,
+      "acc_treino": 0.8672086720867209,
+      "perda_val": 1.0247145057503695,
+      "acc_val": 0.8496732026143791
+    },
+    {
+      "epoca": 5,
+      "perda_treino": 0.7872110589086848,
+      "acc_treino": 0.9295392953929539,
+      "perda_val": 0.9865287776086845,
+      "acc_val": 0.8562091503267973
+    },
+    {
+      "epoca": 6,
+      "perda_treino": 0.719888888723482,
+      "acc_treino": 0.9363143631436315,
+      "perda_val": 0.928239181150798,
+      "acc_val": 0.9019607843137255
+    },
+    {
+      "epoca": 7,
+      "perda_treino": 0.6982029214460999,
+      "acc_treino": 0.948509485094851,
+      "perda_val": 0.8641614984063541,
+      "acc_val": 0.8954248366013072
+    },
+    {
+      "epoca": 8,
+      "perda_treino": 0.6611967312934276,
+      "acc_treino": 0.959349593495935,
+      "perda_val": 0.8553401668087329,
+      "acc_val": 0.8954248366013072
+    },
+    {
+      "epoca": 9,
+      "perda_treino": 0.6219520962981351,
+      "acc_treino": 0.978319783197832,
+      "perda_val": 0.8443512449077532,
+      "acc_val": 0.9150326797385621
+    },
+    {
+      "epoca": 10,
+      "perda_treino": 0.5917149733721725,
+      "acc_treino": 0.9850948509485095,
+      "perda_val": 0.8382536235198476,
+      "acc_val": 0.9019607843137255
+    },
+    {
+      "epoca": 11,
+      "perda_treino": 0.5886748431497796,
+      "acc_treino": 0.9823848238482384,
+      "perda_val": 0.8185511457374672,
+      "acc_val": 0.9215686274509803
+    },
+    {
+      "epoca": 12,
+      "perda_treino": 0.5703597042941788,
+      "acc_treino": 0.983739837398374,
+      "perda_val": 0.8145147959391276,
+      "acc_val": 0.9281045751633987
+    },
+    {
+      "epoca": 13,
+      "perda_treino": 0.5759969054844968,
+      "acc_treino": 0.9850948509485095,
+      "perda_val": 0.8017793558781443,
+      "acc_val": 0.9215686274509803
+    },
+    {
+      "epoca": 14,
+      "perda_treino": 0.5626296131268427,
+      "acc_treino": 0.9905149051490515,
+      "perda_val": 0.8040396882817636,
+      "acc_val": 0.9215686274509803
+    },
+    {
+      "epoca": 15,
+      "perda_treino": 0.580920252373548,
+      "acc_treino": 0.986449864498645,
+      "perda_val": 0.8028301534309886,
+      "acc_val": 0.9215686274509803
+    }
+  ]
+}
